@@ -9,6 +9,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,6 +30,15 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setCustomView(R.layout.action_bar);
 
         View view = getSupportActionBar().getCustomView();
+        ImageButton imageButton = view.findViewById(R.id.image_button);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, EditDetailsActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
 
         loadData();
