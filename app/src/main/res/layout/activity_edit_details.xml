@@ -71,21 +71,34 @@
                 android:id="@+id/et_mobile_number_edit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/et_your_name"
+                android:layout_below="@id/et_your_name_edit"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:hint="@string/emergency_mobile_number_to_send_message_to" />
 
             <Button
+                android:id="@+id/updateButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/et_mobile_number"
+                android:layout_below="@id/et_mobile_number_edit"
                 android:background="@drawable/cardviewbacground"
                 android:text="Update"
                 android:textColor="#FFF"
-                android:onClick="submitDetails"
                 android:layout_marginTop="70dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                />
+
+            <Button
+                android:id="@+id/btnback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/updateButton"
+                android:background="@drawable/background_btn_cancle"
+                android:text="Cancel"
+                android:textColor="#FFF"
+                android:layout_marginTop="10dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 />
