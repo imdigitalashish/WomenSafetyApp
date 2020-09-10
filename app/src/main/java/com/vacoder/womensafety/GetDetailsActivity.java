@@ -2,6 +2,7 @@ package com.vacoder.womensafety;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -40,6 +41,9 @@ public class GetDetailsActivity extends AppCompatActivity {
             editor.putString(USER_NAME, et_name.getText().toString());
             editor.putString(MOBILE_NUMBER, et_mobile_number.getText().toString());
             editor.apply();
+            Intent intent = new Intent();
+            intent.putExtra(USER_NAME, et_name.getText().toString());
+            setResult(RESULT_OK, intent);
             finish();
         } else {
             Toast.makeText(this, "Please Enter The Details", Toast.LENGTH_SHORT).show();
